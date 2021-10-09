@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/select-buy-repeat/static/css/main.a617e044.chunk.css",
+    "main.js": "/select-buy-repeat/static/js/main.4265d0e7.chunk.js",
+    "main.js.map": "/select-buy-repeat/static/js/main.4265d0e7.chunk.js.map",
+    "runtime-main.js": "/select-buy-repeat/static/js/runtime-main.7cebbd57.js",
+    "runtime-main.js.map": "/select-buy-repeat/static/js/runtime-main.7cebbd57.js.map",
+    "static/js/2.f28aab7f.chunk.js": "/select-buy-repeat/static/js/2.f28aab7f.chunk.js",
+    "static/js/2.f28aab7f.chunk.js.map": "/select-buy-repeat/static/js/2.f28aab7f.chunk.js.map",
+    "static/js/3.728de8a8.chunk.js": "/select-buy-repeat/static/js/3.728de8a8.chunk.js",
+    "static/js/3.728de8a8.chunk.js.map": "/select-buy-repeat/static/js/3.728de8a8.chunk.js.map",
+    "index.html": "/select-buy-repeat/index.html",
+    "service-worker.js": "/select-buy-repeat/service-worker.js",
+    "service-worker.js.map": "/select-buy-repeat/service-worker.js.map",
+    "static/css/main.a617e044.chunk.css.map": "/select-buy-repeat/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.f28aab7f.chunk.js.LICENSE.txt": "/select-buy-repeat/static/js/2.f28aab7f.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/select-buy-repeat/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7cebbd57.js",
+    "static/js/2.f28aab7f.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.4265d0e7.chunk.js"
+  ]
+}
