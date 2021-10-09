@@ -1,23 +1,31 @@
 import React from "react";
 import "./App.css";
-import MainPage from "./pages/MainPage";
-import { Navigator } from "react-onsenui";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import MainListPage from "./pages/MainListPage";
+import AddItemPage from "./pages/AddItemPage";
 
-interface PageRoute {
-  component: any;
-  props?: any;
-}
+import {
+  App,
+  Page,
+  Navbar,
+  BlockTitle,
+  List,
+  ListItem,
+} from "tailwind-mobile/react";
 
-function renderPage(route: PageRoute, navigator: Navigator) {
-  const props = route.props || {};
-  props.navigator = navigator;
-  return React.createElement(route.component, props);
-}
-
-function App() {
+export default function MyApp() {
   return (
-    <Navigator initialRoute={{ component: MainPage }} renderPage={renderPage} />
+    <Router basename="/select-buy-repeat">
+      <App theme="ios">
+        <Switch>
+          <Route path="/add">
+            <AddItemPage />
+          </Route>
+          <Route path="/">
+            <MainListPage />
+          </Route>
+        </Switch>
+      </App>
+    </Router>
   );
 }
-
-export default App;
