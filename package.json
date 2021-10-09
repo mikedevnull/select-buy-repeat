@@ -3,58 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://mikedevnull.github.io/select-buy-repeat/",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.2",
-    "@types/node": "^16.10.3",
-    "@types/onsenui": "^2.0.0",
-    "@types/react": "^17.0.27",
-    "@types/react-dom": "^17.0.9",
     "@types/react-onsenui": "^2.9.14",
     "onsenui": "^2.11.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-onsenui": "^1.11.5",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.0.3",
-    "web-vitals": "^2.1.1",
-    "workbox-background-sync": "^6.3.0",
-    "workbox-broadcast-update": "^6.3.0",
-    "workbox-cacheable-response": "^6.3.0",
-    "workbox-core": "^6.3.0",
-    "workbox-expiration": "^6.3.0",
-    "workbox-google-analytics": "^6.3.0",
-    "workbox-navigation-preload": "^6.3.0",
-    "workbox-precaching": "^6.3.0",
-    "workbox-range-requests": "^6.3.0",
-    "workbox-routing": "^6.3.0",
-    "workbox-strategies": "^6.3.0",
-    "workbox-streams": "^6.3.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-onsenui": "^1.11.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4"
   }
 }
