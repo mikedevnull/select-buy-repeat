@@ -1,14 +1,13 @@
-import {
-  Page,
-  Navbar,
-  BlockTitle,
-  List,
-  ListItem,
-} from "tailwind-mobile/react";
+import { Page, Navbar, BlockTitle } from "tailwind-mobile/react";
 import { Link } from "tailwind-mobile/react";
 import { Link as RouterLink } from "react-router-dom";
+import ItemList from "../components/ItemList";
 
 export default function MainListPage() {
+  const items = [
+    { id: 1, title: "First" },
+    { id: 2, title: "Second" },
+  ];
   return (
     <Page>
       <Navbar
@@ -20,12 +19,9 @@ export default function MainListPage() {
           </Link>
         }
       />
-      <BlockTitle>Simple List</BlockTitle>
-      <List>
-        <ListItem link chevron={false} title="Item 1" />
-        <ListItem title="Item 2" />
-        <ListItem title="Item 3" />
-      </List>
+      <BlockTitle>Open items</BlockTitle>
+      <ItemList items={items}></ItemList>
+      <BlockTitle>Closed items</BlockTitle>
     </Page>
   );
 }

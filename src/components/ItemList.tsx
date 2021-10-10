@@ -1,5 +1,13 @@
-export default function ItemList() {
-  const items = ["One", "Two"];
+import Item from "../Item";
+import { List, ListItem } from "tailwind-mobile/react";
 
-  return <div />;
+export type ItemListProps = {
+  items: Item[];
+};
+
+export default function ItemList(props: ItemListProps) {
+  const renderedItems = props.items.map((item) => (
+    <ListItem link chevron={false} key={item.id} title={item.title} />
+  ));
+  return <List>{renderedItems}</List>;
 }

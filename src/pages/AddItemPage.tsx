@@ -13,7 +13,10 @@ export default function AddItemPage() {
         left={<NavbarBackLink text="Back" onClick={() => history.back()} />}
         title="My App"
       />
-      <BlockTitle>fooo</BlockTitle>
+      <input
+        placeholder="Item"
+        className="p-2 block text-base appearance-none w-full focus:outline-none h-11 placeholder-black placeholder-opacity-30"
+      />
     </Page>
   );
 }
