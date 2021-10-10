@@ -3,15 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MainListPage from "./pages/MainListPage";
 import AddItemPage from "./pages/AddItemPage";
-
-import {
-  App,
-  Page,
-  Navbar,
-  BlockTitle,
-  List,
-  ListItem,
-} from "tailwind-mobile/react";
+import ServiceWorkerWrapper from "./ServiceWorkerWrapper";
+import { App } from "tailwind-mobile/react";
 
 export default function MyApp() {
   return (
@@ -26,6 +19,7 @@ export default function MyApp() {
           </Route>
         </Switch>
       </App>
+      <ServiceWorkerWrapper />
     </Router>
   );
 }
