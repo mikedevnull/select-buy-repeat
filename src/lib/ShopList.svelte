@@ -1,43 +1,32 @@
 <script lang="ts">
   import type { ShopListEntity } from "./ShopListEntity";
   import ShopListItem from "./ShopListItem.svelte";
-  export let items: ArrayLike<ShopListEntity>;
+  import ItemInput from "./ItemInput.svelte";
+  export let items: Array<ShopListEntity>;
+  let shownItems = items;
+
+  const filter = (e: CustomEvent) => {
+    const filtervalue = e.detail.value.toLowerCase();
+    shownItems = items.filter((i) => {
+      return i.name.toLowerCase().startsWith(filtervalue);
+    });
+  };
+  const add = (e: CustomEvent) => {
+    const newItem = { id: 0, name: e.detail.value, checked: false };
+    items = [newItem, ...items];
+    shownItems = items;
+  };
 </script>
 
-<div class="shoplist">
-  {#each items as item}<ShopListItem bind:item />{/each}
-</div>
+<section class="flex flex-col">
+  <div class="navbar rounded mb-4 text-primary-content bg-primary bg-base-100">
+    <span class="text-xl">Shop list</span>
+  </div>
+  <ItemInput on:change={filter} on:add={add} />
+  <div class="divide-y">
+    {#each shownItems as item}<ShopListItem bind:item />{/each}
+  </div>
+</section>
 
 <style>
-  .shoplist {
-    display: flex;
-    flex-direction: column;
-  }
-  .newItem {
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    background-color: white;
-    margin: 0.4em;
-    padding: 0.4em;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 640px;
-    margin: auto;
-    margin-bottom: 1em;
-  }
-
-  .newItem:focus {
-    top: 0;
-    bottom: auto;
-  }
-
-  .newItem input[type="text"] {
-    width: 100%;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    padding: 4px;
-  }
 </style>

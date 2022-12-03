@@ -8,27 +8,17 @@
   }
 </script>
 
-<div class="shoplistitem" on:click={() => handleClick(item)}>
-  <span>{item.name}</span>
+<div
+  class="flex py-4 px-2 cursor-pointer  hover:bg-base-200"
+  on:click={() => handleClick(item)}
+>
+  {#if item.checked == true}
+    <input type="checkbox" checked class="checkbox" />
+  {:else}
+    <input type="checkbox" class="checkbox" />
+  {/if}
+  <span class="flex-grow px-2">{item.name}</span>
 </div>
 
 <style>
-  .shoplistitem {
-    border-top: 1px solid var(--color-border);
-    padding: 1em;
-    cursor: pointer;
-  }
-  .shoplistitem:last-child {
-    border-bottom: 1px solid var(--color-border);
-  }
-  .shoplistitem:first-child {
-    border-top: 1px none;
-  }
-
-  .shoplistitem span {
-    flex-grow: 1;
-  }
-
-  .shoplistitem :hover {
-  }
 </style>

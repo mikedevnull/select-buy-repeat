@@ -1,6 +1,5 @@
 <script lang="ts">
   import ShopList from "./lib/ShopList.svelte";
-  import ItemInput from "./lib/ItemInput.svelte";
   import type { ShopListEntity } from "./lib/ShopListEntity";
 
   let items: Array<ShopListEntity> = [
@@ -10,5 +9,6 @@
   ];
 </script>
 
-<ItemInput />
-<ShopList bind:items />
+<main class="md:max-w-screen-md container mx-auto p-2">
+  <ShopList bind:items />
+</main>
