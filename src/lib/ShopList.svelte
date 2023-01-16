@@ -23,9 +23,9 @@
     <span class="text-xl">Shop list</span>
   </div>
   <ItemInput on:change={filter} on:add={add} />
-  <div class="divide-y">
+  <ul class="divide-y">
     {#each shownItems as item}<ShopListItem bind:item />{/each}
-  </div>
+  </ul>
 </section>
 
 <style>
